@@ -3,11 +3,9 @@ layout: page
 title: Linux Offered Very Gently
 ---
 
+## Aerostat Ubuntu Linux Hardening Guide
 ## A Simpler Guide To Linux.
 ### an Aerostat & Co. pub.
----
-
-## Aerostat Ubuntu Linux Hardening Guide
 ---
 **Version 0.9**
 
