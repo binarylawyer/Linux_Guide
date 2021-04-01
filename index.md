@@ -15,6 +15,11 @@ ___
 ### Setting up Ubuntu 20.14 LTS 
 ___
 
+### Create a repository from this template
+
+[Go to this repository page on Github](https://binarylawyer.github.io/Linux_Guide/) and click the `Use this template` button on the top right of the page.
+
+
 ## LOCKING DOWN THE OS
 
 **Lock the boot directory**
