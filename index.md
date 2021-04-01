@@ -93,7 +93,7 @@ But if you don't know where to start I can recommend you to import a theme from 
 
 That's it, you now have a totally different appearance for you website.
 
-### Modify the content
+### Modify the content 
 
 You probably don't want the present guide to be the front page of your website, so you should edit the `index.md` file. You probably also want to edit or delete the `CONTRIBUTING.md`, `README.md` and `LICENSE.md` files.
 
