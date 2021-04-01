@@ -7,10 +7,9 @@ title: Linux Offered Very Gently
 ### an Aerostat & Co. pub.
 ---
 
-___
 ## Aerostat Ubuntu Linux Hardening Guide
 ---
-**Version 0.9
+**Version 0.9**
 
 #### Setting up Ubuntu 20.14 LTS 
 ___
