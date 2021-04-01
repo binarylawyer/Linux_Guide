@@ -1,9 +1,14 @@
 ---
 layout: page
-title: Bootstrap 4 Github Pages
+title: Linux Offered Very Gently
 ---
 
-A [Bootstrap 4](https://getbootstrap.com/) template project for [Github Pages](https://pages.github.com/) and [Jekyll](https://jekyllrb.com/).
+## A Simpler Guide To Linux.
+### an Aerostat & Co. pub.
+---
+
+This 
+[Bootstrap 4](https://getbootstrap.com/) template project for [Github Pages](https://pages.github.com/) and [Jekyll](https://jekyllrb.com/).
 
 * A full Bootstrap 4 theme usable both on Github Pages and with a standalone Jekyll.
 * Recompiles Bootstrap from SCSS files, which allows to customize Bootstrap's variables and use Bootstrap themes.
