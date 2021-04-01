@@ -46,7 +46,7 @@ This
 
 ### Create a repository from this template
 
-[Go to this repository page on Github](ttps://binarylawyer.github.io/Linux_Guide/) and click the `Use this template` button on the top right of the page.
+[Go to this repository page on Github](https://binarylawyer.github.io/Linux_Guide/) and click the `Use this template` button on the top right of the page.
 
 ### Choose a name for your repository
 
