@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Binary Lawyer
+---
 
 ## Aerostat Guide To Linux 
 (Ubuntu edition)
