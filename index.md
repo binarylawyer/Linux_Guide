@@ -2,7 +2,8 @@
 layout: page
 title: Binary Lawyer
 
-## Aerostat Ubuntu Linux Hardening Guide
+## Aerostat Guide To Linux 
+(Ubuntu edition)
 ##### A Simpler Guide To Linux.
 ##### an Aerostat & Co. pub.
 ---
