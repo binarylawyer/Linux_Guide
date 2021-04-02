@@ -8,7 +8,7 @@ title: Binary Lawyer
 
 
 [**Web View**](https://binarylawyer.github.io/Linux_Guide/)
-[**GitHub View**](https://github.com/binarylawyer/Linux_Guide/)
+[**GitHub View**](https://github.com/binarylawyer/Linux_Guide/index.html)
 
 ### A Simpler Guide To Linux.
 #### an Aerostat & Co. pub.
