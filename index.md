@@ -12,6 +12,17 @@ title: Binary Lawyer
 #### Setting up Ubuntu 20.14 LTS 
 ___
 
+This is a guide to setting up and hardening a Linux server. This guide has links to all kinds of things but it will never be complete.
+
+That's where you come in.
+
+You can send in your links to this guide or simple design suggestions. It's all welcome and appreciated. This guide was published in GitHub so that Aerostat and LOCM folks can contribute to something that is a public good. If you want to donate to this publication, that's perfectly fine. This guide will have a few wallets (ETH, Near, etc.) for crypto donations, art, voxels, etc.
+If you're so inclined, send a message and I will send back the relevant crypto wallet address.
+Feel free to use this guide and fork it as much as you like.
+If it helps you to learn Linux and Git a little bit faster then that makes this whole project worth it.
+
+This version is focused on hardening the servers.
+
 #### Create a repository from this template
 
 [Go to this repository page on Github](https://binarylawyer.github.io/Linux_Guide/) and click the `Use this template` button on the top right of the page.
@@ -33,10 +44,9 @@ your own home directory using special sshfs and fuse tools.
 
 **Links**
 
-1.  http://bookofzeus.com/harden-ubuntu/
-2.  https://www.pluralsight.com/blog/it-ops/linux-hardening-secure-server-checklist
+1.  [Book of Zeus](http://bookofzeus.com/harden-ubuntu/)
+2. [Server Hardening Checklist](https://www.pluralsight.com/blog/it-ops/linux-hardening-secure-server-checklist)
 3.  
-This 
 [Bootstrap 4](https://getbootstrap.com/) template project for [Github Pages](https://pages.github.com/) and [Jekyll](https://jekyllrb.com/).
 
 * A full Bootstrap 4 theme usable both on Github Pages and with a standalone Jekyll.
