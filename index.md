@@ -1,7 +1,6 @@
 ---
 layout: page
-title: Linux Offered Very Gently
----
+title: Binary Lawyer
 
 ## Aerostat Ubuntu Linux Hardening Guide
 ##### A Simpler Guide To Linux.
