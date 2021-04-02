@@ -4,10 +4,11 @@ title: Binary Lawyer
 
 ## Aerostat Guide To Linux 
 (Ubuntu edition)
+[**Web View**] (https://binarylawyer.github.io/Linux_Guide/)
 ##### A Simpler Guide To Linux.
 ##### an Aerostat & Co. pub.
 ---
-**Version 0.9**
+**Version 0.9** 
 
 #### Setting up Ubuntu 20.14 LTS 
 ___
@@ -22,6 +23,8 @@ Feel free to use this guide and fork it as much as you like.
 If it helps you to learn Linux and Git a little bit faster then that makes this whole project worth it.
 
 This version is focused on hardening the servers.
+
+
 
 #### Create a repository from this template
 
