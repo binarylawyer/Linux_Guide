@@ -3,10 +3,12 @@ layout: page
 title: Binary Lawyer
 ---
 
-# Aerostat Guide To Linux
+# Aerostat's Guide To Linux
 ### (Ubuntu edition)
 
+
 [**Web View**](https://binarylawyer.github.io/Linux_Guide/)
+[**GitHub View**](https://github.com/binarylawyer/Linux_Guide/)
 
 ### A Simpler Guide To Linux.
 #### an Aerostat & Co. pub.
