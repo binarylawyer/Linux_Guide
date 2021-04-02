@@ -5,9 +5,11 @@ title: Binary Lawyer
 
 #Aerostat Guide To Linux
 (Ubuntu edition)
+
 [**Web View**](https://binarylawyer.github.io/Linux_Guide/)
-#####A Simpler Guide To Linux.
-#####an Aerostat & Co. pub.
+
+####A Simpler Guide To Linux.
+####an Aerostat & Co. pub.
 
 **Version 0.9** 
 
@@ -17,7 +19,10 @@ This is a guide to setting up and hardening a Linux server. This guide has links
 
 That's where you come in.
 
-You can send in your links to this guide or simple design suggestions. It's all welcome and appreciated. This guide was published in GitHub so that Aerostat and LOCM folks can contribute to something that is a public good. If you want to donate to this publication, that's perfectly fine. This guide will have a few wallets (ETH, Near, etc.) for crypto donations, art, voxels, etc.
+You can send in your links to this guide or simple design suggestions.
+It's all welcome and appreciated. This guide was published in GitHub so that Aerostat and LOCM folks can contribute to something that is a public good. 
+If you want to donate to this publication, that's perfectly fine. 
+This guide will have a few wallets (ETH, Near, etc.) for crypto donations, art, voxels, etc.
 If you're so inclined, send a message and I will send back the relevant crypto wallet address.
 Feel free to use this guide and fork it as much as you like.
 If it helps you to learn Linux and Git a little bit faster then that makes this whole project worth it.
