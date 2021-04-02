@@ -3,16 +3,15 @@ layout: page
 title: Binary Lawyer
 ---
 
-## Aerostat Guide To Linux ##
+#Aerostat Guide To Linux
 (Ubuntu edition)
 [**Web View**](https://binarylawyer.github.io/Linux_Guide/)
-##### A Simpler Guide To Linux. #####
-##### an Aerostat & Co. pub. #####
+#####A Simpler Guide To Linux.
+#####an Aerostat & Co. pub.
 
-** Version 0.9 ** 
+**Version 0.9** 
 
-#### Setting up Ubuntu 20.14 LTS 
-___
+####Setting up Ubuntu 20.14 LTS 
 
 This is a guide to setting up and hardening a Linux server. This guide has links to all kinds of things but it will never be complete.
 
