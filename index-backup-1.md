@@ -1,9 +1,63 @@
 ---
 layout: page
-title: Bootstrap 4 Github Pages
+title: Binary Lawyer
 ---
 
-A [Bootstrap 4](https://getbootstrap.com/) template project for [Github Pages](https://pages.github.com/) and [Jekyll](https://jekyllrb.com/).
+# Aerostat's Guide To Linux
+### (Ubuntu edition)
+
+
+[**Web View**](https://binarylawyer.github.io/Linux_Guide/)
+[**GitHub View**](https://github.com/binarylawyer/Linux_Guide/blob/master/index.md)
+
+### A Simpler Guide To Linux.
+#### an Aerostat & Co. pub.
+
+**Version 0.9** 
+
+#### Setting up Ubuntu 20.14 LTS 
+
+This is a guide to setting up and hardening a Linux server. This guide has links to all kinds of things but it will never be complete.
+
+That's where you come in.
+
+You can send in your links to this guide or simple design suggestions.
+It's all welcome and appreciated. This guide was published in GitHub so that Aerostat and LOCM folks can contribute to something that is a public good. 
+If you want to donate to this publication, that's perfectly fine. 
+This guide will have a few wallets (ETH, Near, etc.) for crypto donations, art, voxels, etc.
+If you're so inclined, send a message and I will send back the relevant crypto wallet address.
+Feel free to use this guide and fork it as much as you like.
+If it helps you to learn Linux and Git a little bit faster then that makes this whole project worth it.
+
+This version is focused on hardening the servers.
+
+
+
+#### Create a repository from this template
+
+[Go to this repository page on Github](https://binarylawyer.github.io/Linux_Guide/) and click the `Use this template` button on the top right of the page.
+
+
+#### LOCKING DOWN THE OS
+
+**Lock the boot directory**
+
+The boot directory contains important files related to the Linux kernel, 
+so you need to make sure that this directory is locked down to read-only 
+permissions by following the next simple steps. First, open the “fstab” file.
+
+**Encrypt Data Communication For Linux Server**
+
+Use scp, ssh, rsync, or sftp for file transfer. 
+You can also mount remote server file system or 
+your own home directory using special sshfs and fuse tools.
+
+**Links**
+
+1.  [Book of Zeus](http://bookofzeus.com/harden-ubuntu/)
+2. [Server Hardening Checklist](https://www.pluralsight.com/blog/it-ops/linux-hardening-secure-server-checklist)
+3.  
+[Bootstrap 4](https://getbootstrap.com/) template project for [Github Pages](https://pages.github.com/) and [Jekyll](https://jekyllrb.com/).
 
 * A full Bootstrap 4 theme usable both on Github Pages and with a standalone Jekyll.
 * Recompiles Bootstrap from SCSS files, which allows to customize Bootstrap's variables and use Bootstrap themes.
@@ -14,7 +68,7 @@ A [Bootstrap 4](https://getbootstrap.com/) template project for [Github Pages](h
 
 ### Create a repository from this template
 
-[Go to this repository page on Github](https://github.com/nicolas-van/bootstrap-4-github-pages) and click the `Use this template` button on the top right of the page.
+[Go to this repository page on Github](https://binarylawyer.github.io/Linux_Guide/) and click the `Use this template` button on the top right of the page.
 
 ### Choose a name for your repository
 
@@ -61,7 +115,7 @@ But if you don't know where to start I can recommend you to import a theme from 
 
 That's it, you now have a totally different appearance for you website.
 
-### Modify the content
+### Modify the content 
 
 You probably don't want the present guide to be the front page of your website, so you should edit the `index.md` file. You probably also want to edit or delete the `CONTRIBUTING.md`, `README.md` and `LICENSE.md` files.
 
