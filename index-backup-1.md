@@ -1,7 +1,9 @@
 ---
 layout: page
-title: Binary Lawyer
+title: Binary Lawyer (archive)
 ---
+
+> **Archived draft.** The current guide is in [`index.md`](./index.md) and the standalone summary is in [`LINUX_GUIDE.md`](./LINUX_GUIDE.md).
 
 # Aerostat's Guide To Linux
 ### (Ubuntu edition)
