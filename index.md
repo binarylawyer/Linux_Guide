@@ -43,9 +43,10 @@ Feel free to use this guide and fork it freely. If it helps you learn Linux secu
 13. [Intrusion Detection with AIDE](#intrusion-detection-with-aide)
 14. [Log Management](#log-management)
 15. [Monitoring and Auditing](#monitoring-and-auditing)
-16. [Container Security (Docker)](#container-security-docker)
-17. [Useful Commands](#useful-commands)
-18. [Resources](#resources)
+16. [When to Move from Vercel / PaaS to a Self-Managed Server](#when-to-move-from-vercel--paas-to-a-self-managed-server)
+17. [Container Security (Docker)](#container-security-docker)
+18. [Useful Commands](#useful-commands)
+19. [Resources](#resources)
 
 ---
 
@@ -828,6 +829,107 @@ For periodic vulnerability scanning, consider running [Greenbone Community Editi
 
 > 📖 **Reference:** [Lynis Documentation (cisofy.com)](https://cisofy.com/documentation/lynis/)
 > 📖 **Reference:** [NIST National Vulnerability Database](https://nvd.nist.gov/)
+
+---
+
+## When to Move from Vercel / PaaS to a Self-Managed Server
+
+Services like **Vercel**, **Netlify**, **Railway**, **Render**, **Fly.io**, and **Heroku** are excellent for getting projects live quickly — zero infrastructure knowledge required. But there comes a point where they hold you back technically, financially, or legally. This section helps you recognize that inflection point.
+
+### Signs You've Outgrown a PaaS
+
+#### 💸 Cost is scaling faster than your product
+
+Managed platforms charge a premium for compute, bandwidth, and execution time. A single Next.js app with moderate traffic can cost $100–$500/month on Vercel Pro, while a Hetzner VPS or AWS EC2 instance with equivalent resources costs $5–$40/month. If your monthly PaaS bill has grown into the hundreds, a self-managed server will almost certainly be cheaper.
+
+> A Hetzner CX22 (2 vCPU, 4 GB RAM) is ~€4/month. A comparable Vercel plan with similar function invocations can run $20–$100+/month.
+
+#### 🔒 You need full control over your security posture
+
+PaaS providers manage the underlying infrastructure, which means you cannot:
+- Apply custom kernel hardening (`sysctl` parameters, seccomp profiles)
+- Install and configure `auditd`, `AIDE`, or `rkhunter` for compliance
+- Enforce specific firewall rules at the network interface level
+- Meet compliance standards (HIPAA, PCI-DSS, SOC 2, ISO 27001) that require evidence of OS-level controls
+
+If your application handles **sensitive data** — health records, financial data, PII — you almost certainly need a managed server where you control the full stack.
+
+#### ⚙️ Your workloads don't fit the serverless model
+
+PaaS platforms are optimized for stateless, short-lived request/response cycles. You'll hit walls when you need:
+
+- **Long-running processes** — video transcoding, ML inference, batch jobs, websocket servers
+- **Background workers** — queue consumers (Celery, Sidekiq, BullMQ) that run continuously
+- **Persistent connections** — databases, message brokers (Redis, RabbitMQ, Kafka) that you want to co-locate with your app
+- **Cron jobs** — reliable, sub-minute scheduling without paying per-invocation fees
+- **Custom runtimes** — specific compiler versions, system libraries, binary dependencies not available in the platform's build environment
+
+#### 📦 You're running a database or stateful service
+
+Managed database addons on PaaS platforms (Postgres, Redis, etc.) are convenient but expensive and limited. At scale you'll want:
+- Control over `postgresql.conf` tuning parameters
+- Custom backup and replication strategies
+- Ability to co-locate the database on the same private network as your app to eliminate latency
+
+#### 🌐 You need custom networking
+
+PaaS platforms abstract away networking. A self-managed server lets you:
+- Assign static IPs and configure reverse DNS (PTR records) — required for reliable email sending
+- Set up private VPCs and subnet isolation between services
+- Run an Nginx or Caddy reverse proxy with fine-grained routing, rate-limiting, and caching rules
+- Use WireGuard or OpenVPN to link servers in a private mesh
+
+#### 🏛️ Vendor lock-in is a concern
+
+Vercel's Edge Functions, Netlify's primitives, and similar platform-specific features are not portable. If you ever need to migrate, you'll need to rewrite infrastructure code. A standard Linux server with Docker Compose or Kubernetes is deployable anywhere.
+
+---
+
+### Choosing a Cloud / VPS Provider
+
+| Provider | Best For | Notes |
+|---|---|---|
+| [**Hetzner**](https://www.hetzner.com/cloud) | Cost-conscious teams, EU data residency | Cheapest dedicated and VPS options; excellent network; data centers in Germany, Finland, US |
+| [**AWS EC2**](https://aws.amazon.com/ec2/) | Enterprise, compliance, global reach | Widest ecosystem (S3, RDS, IAM, VPC); steep learning curve; pay-per-use |
+| [**Google Cloud (GCE)**](https://cloud.google.com/compute) | ML workloads, global load balancing | Strong networking; per-second billing; generous free tier |
+| [**Microsoft Azure**](https://azure.microsoft.com/en-us/products/virtual-machines) | Microsoft/.NET shops, enterprise AD integration | Best for Windows workloads; HIPAA/FedRAMP BAAs available |
+| [**DigitalOcean**](https://www.digitalocean.com/products/droplets) | Developer-friendly, simple pricing | Great docs; Droplets are easy to provision; less powerful than AWS at scale |
+| [**Linode / Akamai**](https://www.linode.com/) | Budget alternative to AWS | Straightforward pricing; good for small-to-mid workloads |
+| [**OVHcloud**](https://www.ovhcloud.com/) | EU compliance, dedicated servers | Very affordable dedicated hardware; good for GDPR-sensitive workloads |
+
+---
+
+### Migration Checklist: PaaS → Self-Managed Server
+
+When you're ready to make the move, work through this checklist:
+
+- [ ] **Provision the server** — choose a provider above, pick a region close to your users
+- [ ] **Follow this guide** — apply all hardening steps (SSH keys, UFW, Fail2Ban, unattended-upgrades)
+- [ ] **Set up a reverse proxy** — Nginx or [Caddy](https://caddyserver.com/) (Caddy auto-manages TLS via Let's Encrypt)
+- [ ] **Containerize your app** — Docker + Docker Compose makes the app portable and repeatable
+- [ ] **Configure a process manager** — `systemd` or `pm2` to keep your app running after crashes/reboots
+- [ ] **Set up automated backups** — snapshot the VPS, back up databases to S3/Backblaze B2
+- [ ] **Configure monitoring** — set up [Uptime Kuma](https://github.com/louislam/uptime-kuma) (self-hosted) or [Grafana Cloud](https://grafana.com/products/cloud/) free tier for alerts
+- [ ] **Point your domain** — update DNS A records, verify TLS certificate is issued
+- [ ] **Test your deployment pipeline** — GitHub Actions or GitLab CI pushing to the server over SSH
+- [ ] **Run a Lynis audit** — verify the security posture before going live
+
+---
+
+### Quick Cost Comparison (2024 approximate)
+
+| Workload | Vercel/Render/Railway | Hetzner VPS | AWS EC2 |
+|---|---|---|---|
+| Simple Next.js site | Free – $20/mo | €4/mo (CX22) | ~$8/mo (t3.micro) |
+| API + PostgreSQL | $50–$150/mo | €8–€15/mo | $30–$80/mo |
+| High-traffic app (10M req/mo) | $200–$500+/mo | €15–€30/mo | $80–$200/mo |
+| Video/ML processing | Not practical | €20–€80/mo (dedicated) | $100–$500/mo (GPU) |
+
+> **Rule of thumb:** Once your PaaS bill consistently exceeds **$50–$100/month**, it's worth evaluating a self-managed server. The operational overhead is real, but this guide exists to make it manageable.
+
+> 📖 **Reference:** [Hetzner vs AWS vs DigitalOcean Comparison – Geekflare](https://geekflare.com/cloud-hosting-comparison/)
+> 📖 **Reference:** [Caddy Server Documentation](https://caddyserver.com/docs/)
+> 📖 **Reference:** [Self-Hosting vs PaaS – a practical guide (Hacker News discussion)](https://news.ycombinator.com/item?id=36526835)
 
 ---
 
