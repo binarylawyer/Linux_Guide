@@ -1,14 +1,14 @@
 
-# Boostrap 4 Github Pages
+# Aerostat's Guide To Linux
 
-A [Bootstrap 4](https://getbootstrap.com/) template project for [Github Pages](https://pages.github.com/) and [Jekyll](https://jekyllrb.com/).
+A practical guide to setting up and hardening Linux servers (Ubuntu edition).
 
-* A full Bootstrap 4 theme usable both on Github Pages and with a standalone Jekyll.
-* Recompiles Bootstrap from SCSS files, which allows to customize Bootstrap's variables and use Bootstrap themes.
-* Full support of Bootstrap's JavaScript plugins.
-* Supports all features of Github Pages and Jekyll.
+* Covers initial server setup, OS hardening, SSH and user security
+* Firewall configuration, encrypted communication, and patch management
+* Monitoring, logging, and Fail2Ban setup
+* Useful commands reference and curated resource links
 
-[See the website for demonstration and documentation](https://nicolas-van.github.io/bootstrap-4-github-pages/).
+[**Read the Guide**](https://binarylawyer.github.io/Linux_Guide/) | [**View on GitHub**](https://github.com/binarylawyer/Linux_Guide/blob/master/index.md)
 
 ## Contribution
 
