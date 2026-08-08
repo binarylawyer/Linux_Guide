@@ -4,6 +4,8 @@ A practical Ubuntu LTS setup and hardening guide, published as a simple [GitHub 
 
 **Live site:** https://binarylawyer.github.io/Linux_Guide/
 
+**Version:** 1.1 (see [`index.md`](./index.md))
+
 ## Documents
 
 | File | Purpose |
@@ -14,16 +16,18 @@ A practical Ubuntu LTS setup and hardening guide, published as a simple [GitHub 
 
 ## Topics covered
 
-- Choosing an Ubuntu LTS release
-- Initial server setup
-- SSH hardening (keys, disable root/password login)
-- UFW firewall baseline
-- Unattended security updates
-- Non-root admin users
-- fail2ban
-- Encrypted remote access and transfers
-- Boot/`/boot` care and basic permission hygiene
-- Logging, backups, and a post-install checklist
+- Initial Ubuntu LTS server setup
+- OS lockdown (`/boot`, unused filesystems, core dumps)
+- Kernel hardening with sysctl
+- User accounts, password policy, and sudo
+- SSH hardening and optional 2FA
+- UFW firewall and fail2ban
+- Automatic security updates
+- Encrypted transfers and TLS/SSL practices
+- Filesystem security, AIDE, auditd
+- Logging, monitoring, and audits (Lynis, rkhunter)
+- When to move from Vercel / PaaS to a self-managed server
+- Container (Docker) security basics
 
 ## Local preview
 
