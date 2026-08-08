@@ -1,13 +1,14 @@
 ---
 layout: page
-title: Binary Lawyer
+title: Linux Guide
 ---
 
 # Aerostat's Guide To Linux
 ### (Ubuntu Edition)
 
-[**Web View**](https://binarylawyer.github.io/Linux_Guide/)
-[**GitHub View**](https://github.com/binarylawyer/Linux_Guide/blob/master/index.md)
+[**Web View**](https://binarylawyer.github.io/Linux_Guide/) ·
+[**GitHub View**](https://github.com/binarylawyer/Linux_Guide/blob/master/index.md) ·
+[**Standalone Markdown**](./LINUX_GUIDE.md)
 
 ### A Simpler Guide To Linux.
 #### An Aerostat & Co. pub.
@@ -1086,6 +1087,8 @@ This guide is open source. If you'd like to contribute:
 - Submit a pull request with your additions or corrections
 
 All contributions are welcome and appreciated.
+
+A portable summary lives in [`LINUX_GUIDE.md`](./LINUX_GUIDE.md). The previous mixed homepage draft is archived in [`index-backup-1.md`](./index-backup-1.md).
 
 ---
 
