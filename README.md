@@ -8,7 +8,7 @@ A practical guide to setting up and hardening Linux servers (Ubuntu edition).
 * Monitoring, logging, and Fail2Ban setup
 * Useful commands reference and curated resource links
 
-[**Read the Guide**](https://binarylawyer.github.io/Linux_Guide/) | [**View on GitHub**](https://github.com/binarylawyer/Linux_Guide/blob/master/index.md)
+[**Read the Guide**](https://binarylawyer.github.io/Linux_Guide/) | [**View on GitHub**](index.md)
 
 ## Contribution
 
